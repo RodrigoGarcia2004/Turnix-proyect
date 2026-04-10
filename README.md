@@ -47,7 +47,7 @@ Para superar la crítica de "ampliación superficial", se ha diseñado un esquem
 
 ---
 
-## 🚀 ESPECIFICACIONES FUNCIONALES (Nivel Avanzado)
+## 🚀 ESPECIFICACIONES FUNCIONALES
 1.  **RF-1 Autenticación Robusta:** Acceso diferenciado con validación en servidor y persistencia de sesión.
 2.  **RF-2 Gestión de Turnos Inteligente:** Algoritmo que calcula la posición real y notifica cambios al instante.
 3.  **RF-3 Chat Médico-Paciente:** Comunicación cifrada en tránsito mediante el túnel del WebSocket.
@@ -56,7 +56,7 @@ Para superar la crítica de "ampliación superficial", se ha diseñado un esquem
 
 ---
 
-## 📅 PLANIFICACIÓN TÉCNICA (GANTT REVISADO)
+## 📅 PLANIFICACIÓN TÉCNICA
 
 | Fase | Descripción | Tecnologías | Duración |
 | :--- | :--- | :--- | :--- |
