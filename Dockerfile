@@ -1,13 +1,15 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-# Copiamos todo el proyecto
+# Descargar librería Java-WebSocket
+RUN curl -L -o java-websocket.jar https://repo1.maven.org/maven2/org/java-websocket/Java-WebSocket/1.5.7/Java-WebSocket-1.5.7.jar
+
 COPY . .
 
-# Compilamos todos los archivos Java (incluyendo subcarpetas)
+# Compilar con la librería
 RUN find . -name "*.java" > sources.txt && \
-    javac -d . @sources.txt
+    javac -cp ".:java-websocket.jar" -d . @sources.txt
 
-# Ejecutamos el servidor
-CMD ["java", "servidor.ServidorWeb"]
+# Ejecutar con la librería
+CMD ["java", "-cp", ".:java-websocket.jar", "servidor.ServidorWeb"]
